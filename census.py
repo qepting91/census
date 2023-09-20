@@ -72,9 +72,9 @@ def create_pr_alien_map(df):
 
 if st.checkbox('Show Distribution of Permanent Resident Aliens by Zip Code'):
     st.write('''
-        This map displays ZIP codes with non-zero counts of permanent resident aliens. The blue markers represent these ZIP codes, 
-        with their sizes indicating the number of permanent resident aliens in that area. 
-        From the visualization, there's a noticeable concentration of markers in New York City, especially in the Brooklyn and Queens boroughs, 
+        This map displays ZIP codes with non-zero counts of permanent resident aliens. The blue markers represent these ZIP codes,
+        with their sizes indicating the number of permanent resident aliens in that area.
+        From the visualization, there's a noticeable concentration of markers in New York City, especially in the Brooklyn and Queens boroughs,
         with a few markers dispersed in other regions outside of NYC.
     ''')
     pr_alien_map = create_pr_alien_map(df)
@@ -116,9 +116,9 @@ def plot_gender_distribution(df):
         initial_view_state=view_state,
         layers=[gender_layer]
     )
-    return gender_map_show()
+    return gender_map
 
 if st.checkbox('Show Gender Distribution by Location'):
     gender_map = plot_gender_distribution(df)
     st.write('This map displays gender distribution by area, separated by the colors blue, pink, and grey.')
-    st.pydeck_chart(gender_map_show())
+    st.pydeck_chart(gender_map)
