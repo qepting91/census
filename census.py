@@ -116,9 +116,9 @@ def plot_gender_distribution(df):
         initial_view_state=view_state,
         layers=[gender_layer]
     )
-    return gender_map
+    return gender_map_show()
 
 if st.checkbox('Show Gender Distribution by Location'):
     gender_map = plot_gender_distribution(df)
     st.write('This map displays gender distribution by area, separated by the colors blue, pink, and grey.')
-    st.pydeck_chart(gender_map)
+    st.pydeck_chart(gender_map_show())
