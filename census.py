@@ -4,11 +4,13 @@ import matplotlib.pyplot as plt
 import folium
 from streamlit_folium import folium_static
 import pydeck as pdk
+from streamlit_lottie import st_lottie
 
 # Setting the Streamlit title and description
 st.title('Census Data Exploration')
 st.write('This analysis will use data aggregated on the zip code level, available from, https://catalog.data.gov/dataset/demographic-statistics-by-zip-code')
-
+with st.echo():
+    st_lottie("https://lottie.host/d7ef67db-4f71-4911-8c41-01468afa98f9/Q4IsgwjN80.json")
 # Function to load data
 def load_data():
     # Define appropriate data types for each column
