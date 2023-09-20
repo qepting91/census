@@ -7,4 +7,4 @@ pgeocode
 folium
 streamlit_folium
 pydeck
-
+streamlit-lottie
