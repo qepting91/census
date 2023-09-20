@@ -33,7 +33,7 @@ if st.checkbox('Show Data Overview'):
         "Select columns to view statistics", df.columns, default=["COUNT PARTICIPANTS", "COUNT FEMALE", "COUNT MALE"]
     )
     if selected_columns:
-        st.write(df[selected_columns].describe())
+        st.write(df[selected_columns])
 
 st.divider()
 
